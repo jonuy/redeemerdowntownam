@@ -1,3 +1,13 @@
 body {
+  background-color: #eee;
   font-family: Verdana;
+}
+
+h1 {
+  color: #015067;
+  font-family: 'Donegal One';
+}
+
+h2 {
+  font-family: 'Donegal One';
 }

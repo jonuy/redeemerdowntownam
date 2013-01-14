@@ -3,19 +3,23 @@ define(
     'jquery',
     'underscore',
     'backbone',
+    'views/LocationView',
     'views/ProgramView',
   ],
 
-  function($, _, Backbone, ProgramView) {
+  function($, _, Backbone, LocationView, ProgramView) {
 
     var AppRouter = Backbone.Router.extend({
       routes: {
         '': 'showProgram',
         'program': 'showProgram',
+        'location': 'showLocation',
       },
       showProgram: function() {
         var programView = new ProgramView();
-        programView.render();
+      },
+      showLocation: function() {
+        var locationView = new LocationView();
       },
     });
 

@@ -3,16 +3,24 @@ define(
     'jquery',
     'underscore',
     'backbone',
+    'views/LocationView',
     'text!templates/programTemplate.html',
   ],
 
-  function($, _, Backbone, programTemplate) {
+  function($, _, Backbone, LocationView, programTemplate) {
 
     var ProgramView = Backbone.View.extend({
-      el: $('#container'),
+      el: $('#page'),
+
+      initialize: function() {
+        var locationView = new LocationView();
+        
+        this.render();
+      },
 
       render: function() {
-        this.$el.html(programTemplate);
+        this.$el.append(programTemplate);
+
 
         // TODO: use multiple Views to render different sections of the screen
       },
