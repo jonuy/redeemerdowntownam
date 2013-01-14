@@ -8,9 +8,14 @@ define(
 
   function($, _, Backbone, ProgramView) {
 
-    var AppRouter = Backbone.Model.extend({
+    var AppRouter = Backbone.Router.extend({
       routes: {
-        '*': 'showProgram',
+        '': 'showProgram',
+        'program': 'showProgram',
+      },
+      showProgram: function() {
+        var programView = new ProgramView();
+        programView.render();
       },
     });
 
@@ -18,12 +23,9 @@ define(
 
       var app_router = new AppRouter();
 
-      app_router.on('route:showProgram', function() {
-        var programView = new ProgramView();
-        programView.render();
-      });
-
       Backbone.history.start();
+
+      //app_router.navigate('#program', {trigger: true});
     };
 
     return {

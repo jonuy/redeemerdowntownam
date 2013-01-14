@@ -1,21 +1,23 @@
-// define(
-//   [
-//     'jquery',
-//     'underscore',
-//     'backbone',
-//     'text!templates/programTemplate.html',
-//   ],
+define(
+  [
+    'jquery',
+    'underscore',
+    'backbone',
+    'text!templates/programTemplate.html',
+  ],
 
-//   function($, _, Backbone, programTemplate) {
+  function($, _, Backbone, programTemplate) {
 
-//     var ProgramView = Backbone.View.extend({
-//       render: function() {
-//         alert('ProgramView.render');
+    var ProgramView = Backbone.View.extend({
+      el: $('#container'),
 
-//         // TODO: use multiple Views to render different sections of the screen
-//       },
-//     });
+      render: function() {
+        this.$el.html(programTemplate);
 
-//     return ProgramView;
-//   }
-// );
+        // TODO: use multiple Views to render different sections of the screen
+      },
+    });
+
+    return ProgramView;
+  }
+);
