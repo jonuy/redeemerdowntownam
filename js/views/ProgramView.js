@@ -3,19 +3,29 @@ define(
     'jquery',
     'underscore',
     'backbone',
+    'models/ProgramModel',
     'views/LocationView',
     'text!templates/programTemplate.html',
   ],
 
-  function($, _, Backbone, LocationView, programTemplate) {
+  function($, _, Backbone, ProgramModel, LocationView, programTemplate) {
+
+    var programModel = new ProgramModel();
 
     var ProgramView = Backbone.View.extend({
       el: $('#page'),
 
       initialize: function() {
-        var locationView = new LocationView();
-        
-        this.render();
+        var programView = this;
+
+        var onModelFetched = function(data) {
+          var locationView = new LocationView(programModel.get('location'));
+          locationView.render();
+
+          programView.render();
+        };
+
+        programModel.fetch({success:onModelFetched});
       },
 
       render: function() {

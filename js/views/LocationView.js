@@ -11,18 +11,12 @@ define(
     var LocationView = Backbone.View.extend({
       el: $('#page'),
 
-      initialize: function() {
-        this.render();
+      initialize: function(data) {
+        this.data = data;
       },
 
       render: function() {
-        data = {
-          time: '9:30 AM',
-          location_address: '135 W. 18th Street (between 6th and 7th Aves.)',
-          location_name: 'The Carriage House',
-        };
-
-        var compiledTemplate = _.template(locationTemplate, data);
+        var compiledTemplate = _.template(locationTemplate, this.data);
         this.$el.append(compiledTemplate);
       },
 
