@@ -29,10 +29,10 @@ define(
       },
 
       render: function() {
-        this.$el.append(programTemplate);
+        var programData = programModel.get('program');
 
-
-        // TODO: use multiple Views to render different sections of the screen
+        var compiledTemplate = _.template(programTemplate, programData);
+        this.$el.append(compiledTemplate);
       },
     });
 
