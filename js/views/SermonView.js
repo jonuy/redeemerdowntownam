@@ -3,12 +3,12 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/whereIsServiceTemplate.html',
+    'text!templates/sermonTemplate.html'
   ],
 
   function($, _, Backbone, template) {
 
-    var LocationView = Backbone.View.extend({
+    var SermonView = Backbone.View.extend({
       el: $('#page'),
 
       initialize: function(data) {
@@ -18,10 +18,10 @@ define(
       render: function() {
         var compiledTemplate = _.template(template, this.data);
         this.$el.append(compiledTemplate);
-      },
+      }
 
     });
 
-    return LocationView;
+    return SermonView;
   }
 );

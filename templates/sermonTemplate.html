@@ -1,0 +1,13 @@
+<% if(typeof(scripture_verses) != undefined &&
+      typeof(scripture_body) != undefined &&
+      typeof(sermon_title) != undefined &&
+      typeof(sermon_series) != undefined &&
+      typeof(sermon_deliverer) != undefined) { %>
+<h3>Scripture</h3>
+<p><b><%= scripture_verses %></b></p>
+<p><%= scripture_body %></p>
+<p>
+  <i><%= sermon_title %> - <%= sermon_series %></i><br>
+  <%= sermon_deliverer %>
+</p>
+<% } %>

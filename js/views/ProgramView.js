@@ -5,10 +5,12 @@ define(
     'backbone',
     'models/ProgramModel',
     'views/LocationView',
+    'views/ReflectionView',
+    'views/SermonView',
     'text!templates/programTemplate.html',
   ],
 
-  function($, _, Backbone, ProgramModel, LocationView, programTemplate) {
+  function($, _, Backbone, ProgramModel, LocationView, ReflectionView, SermonView, programTemplate) {
 
     var programModel = new ProgramModel();
 
@@ -33,6 +35,12 @@ define(
 
         var compiledTemplate = _.template(programTemplate, programData);
         this.$el.append(compiledTemplate);
+
+        var reflectionView = new ReflectionView(programData);
+        reflectionView.render();
+
+        var sermonView = new SermonView(programData);
+        sermonView.render();
       },
     });
 
