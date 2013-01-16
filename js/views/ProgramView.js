@@ -6,11 +6,12 @@ define(
     'models/ProgramModel',
     'views/LocationView',
     'views/ReflectionView',
+    'views/AnnouncementsView',
     'views/SermonView',
     'text!templates/programTemplate.html',
   ],
 
-  function($, _, Backbone, ProgramModel, LocationView, ReflectionView, SermonView, programTemplate) {
+  function($, _, Backbone, ProgramModel, LocationView, ReflectionView, AnnouncementsView, SermonView, programTemplate) {
 
     var programModel = new ProgramModel();
 
@@ -38,6 +39,9 @@ define(
 
         var reflectionView = new ReflectionView(programData);
         reflectionView.render();
+
+        var announcementsView = new AnnouncementsView(programData);
+        announcementsView.render();
 
         var sermonView = new SermonView(programData);
         sermonView.render();
