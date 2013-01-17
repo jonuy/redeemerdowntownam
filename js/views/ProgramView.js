@@ -23,9 +23,6 @@ define(
         var programView = this;
 
         var onModelFetched = function(data) {
-          var locationView = new LocationView(programModel.get('location'));
-          locationView.render();
-
           programView.render();
         };
 
@@ -33,6 +30,10 @@ define(
       },
 
       render: function() {
+        var locationData = programModel.get('location');
+        var locationView = new LocationView(locationData);
+        locationView.render();
+
         var programData = programModel.get('program');
 
         var compiledTemplate = _.template(programTemplate, programData);
