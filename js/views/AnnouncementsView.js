@@ -11,12 +11,9 @@ define(
     var AnnouncementsView = Backbone.View.extend({
       el: $('#page'),
 
-      initialize: function(data) {
-        this.data = data;
-      },
-
       render: function() {
-        var compiledTemplate = _.template(template, this.data);
+        var programData = this.dataModel.get('program');
+        var compiledTemplate = _.template(template, programData);
         this.$el.append(compiledTemplate);
       }
 

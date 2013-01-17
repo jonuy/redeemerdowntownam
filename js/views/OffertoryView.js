@@ -3,12 +3,12 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/sermonTemplate.html'
+    'text!templates/offertoryTemplate.html'
   ],
 
   function($, _, Backbone, template) {
 
-    var SermonView = Backbone.View.extend({
+    var OffertoryView = Backbone.View.extend({
       el: $('#page'),
 
       render: function() {
@@ -19,6 +19,6 @@ define(
 
     });
 
-    return SermonView;
+    return OffertoryView;
   }
 );

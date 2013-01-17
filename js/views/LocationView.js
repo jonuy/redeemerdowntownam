@@ -11,12 +11,9 @@ define(
     var LocationView = Backbone.View.extend({
       el: $('#page'),
 
-      initialize: function(data) {
-        this.data = data;
-      },
-
       render: function() {
-        var compiledTemplate = _.template(template, this.data);
+        var locationData = this.dataModel.get('location');
+        var compiledTemplate = _.template(template, locationData);
         this.$el.append(compiledTemplate);
       },
 

@@ -3,36 +3,25 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'models/ProgramModel',
     'views/LocationView',
     'views/ReflectionView',
     'views/AnnouncementsView',
     'views/SermonView',
+    'views/OffertoryView',
     'text!templates/programTemplate.html',
   ],
 
-  function($, _, Backbone, ProgramModel, LocationView, ReflectionView, AnnouncementsView, SermonView, programTemplate) {
-
-    var programModel = new ProgramModel();
+  function($, _, Backbone, LocationView, ReflectionView, AnnouncementsView, SermonView, OffertoryView, programTemplate) {
 
     var ProgramView = Backbone.View.extend({
       el: $('#page'),
 
-      initialize: function() {
-        var programView = this;
-
-        var onModelFetched = function(data) {
-          var locationView = new LocationView(programModel.get('location'));
-          locationView.render();
-
-          programView.render();
-        };
-
-        programModel.fetch({success:onModelFetched});
-      },
-
       render: function() {
-        var programData = programModel.get('program');
+        var locationView = new LocationView();
+        locationView.dataModel = this.dataModel;
+        locationView.render();
+
+        var programData = this.dataModel.get('program');
 
         var compiledTemplate = _.template(programTemplate, programData);
         this.$el.append(compiledTemplate);
@@ -45,6 +34,9 @@ define(
 
         var sermonView = new SermonView(programData);
         sermonView.render();
+
+        var offertoryView = new OffertoryView(programData);
+        offertoryView.render();
       },
     });
 
