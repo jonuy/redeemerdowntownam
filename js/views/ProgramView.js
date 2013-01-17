@@ -3,7 +3,6 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'models/ProgramModel',
     'views/LocationView',
     'views/ReflectionView',
     'views/AnnouncementsView',
@@ -12,29 +11,17 @@ define(
     'text!templates/programTemplate.html',
   ],
 
-  function($, _, Backbone, ProgramModel, LocationView, ReflectionView, AnnouncementsView, SermonView, OffertoryView, programTemplate) {
-
-    var programModel = new ProgramModel();
+  function($, _, Backbone, LocationView, ReflectionView, AnnouncementsView, SermonView, OffertoryView, programTemplate) {
 
     var ProgramView = Backbone.View.extend({
       el: $('#page'),
 
-      initialize: function() {
-        var programView = this;
-
-        var onModelFetched = function(data) {
-          programView.render();
-        };
-
-        programModel.fetch({success:onModelFetched});
-      },
-
       render: function() {
-        var locationData = programModel.get('location');
-        var locationView = new LocationView(locationData);
+        var locationView = new LocationView();
+        locationView.dataModel = this.dataModel;
         locationView.render();
 
-        var programData = programModel.get('program');
+        var programData = this.dataModel.get('program');
 
         var compiledTemplate = _.template(programTemplate, programData);
         this.$el.append(compiledTemplate);
