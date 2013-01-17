@@ -8,10 +8,11 @@ define(
     'views/ReflectionView',
     'views/AnnouncementsView',
     'views/SermonView',
+    'views/OffertoryView',
     'text!templates/programTemplate.html',
   ],
 
-  function($, _, Backbone, ProgramModel, LocationView, ReflectionView, AnnouncementsView, SermonView, programTemplate) {
+  function($, _, Backbone, ProgramModel, LocationView, ReflectionView, AnnouncementsView, SermonView, OffertoryView, programTemplate) {
 
     var programModel = new ProgramModel();
 
@@ -45,6 +46,9 @@ define(
 
         var sermonView = new SermonView(programData);
         sermonView.render();
+
+        var offertoryView = new OffertoryView(programData);
+        offertoryView.render();
       },
     });
 
