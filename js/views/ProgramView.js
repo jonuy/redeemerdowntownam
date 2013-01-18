@@ -22,20 +22,23 @@ define(
         locationView.render();
 
         var programData = this.dataModel.get('program');
-
         var compiledTemplate = _.template(programTemplate, programData);
         this.$el.append(compiledTemplate);
 
-        var reflectionView = new ReflectionView(programData);
+        var reflectionView = new ReflectionView();
+        reflectionView.dataModel = this.dataModel;
         reflectionView.render();
 
-        var announcementsView = new AnnouncementsView(programData);
+        var announcementsView = new AnnouncementsView();
+        announcementsView.dataModel = this.dataModel;
         announcementsView.render();
 
-        var sermonView = new SermonView(programData);
+        var sermonView = new SermonView();
+        sermonView.dataModel = this.dataModel;
         sermonView.render();
 
-        var offertoryView = new OffertoryView(programData);
+        var offertoryView = new OffertoryView();
+        offertoryView.dataModel = this.dataModel;
         offertoryView.render();
       },
     });
