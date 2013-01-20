@@ -24,6 +24,7 @@ require.config({
 define(
   [
     'app',
+    'jqm-config',
   ],
   function(App) {
     App.initialize();
