@@ -81,7 +81,7 @@ define(
       pageDiv.live('swiperight', function() {
         if (isMenuOpen == false) {
           pageDiv.animate(
-            {marginLeft: '225px'},
+            {marginLeft: '165px'},
             300,
             function() {
               isMenuOpen = true;
@@ -89,6 +89,28 @@ define(
           );
         }
       });
+
+      $('#menu-button').on('tap', function() {
+        if (isMenuOpen == true) {
+          pageDiv.animate(
+            {marginLeft: '0'},
+            300,
+            function() {
+              isMenuOpen = false;
+            }
+          );
+        }
+        else {
+          pageDiv.animate(
+            {marginLeft: '165px'},
+            300,
+            function() {
+              isMenuOpen = true;
+            }
+          );
+        }
+      });
+
     };
 
     return {

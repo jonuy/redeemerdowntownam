@@ -1,5 +1,5 @@
 body {
-  background-color: #eee;
+  background-color: #015067;
   font-family: Verdana;
 }
 
@@ -17,12 +17,16 @@ h3 {
 }
 
 #menu {
+  background-color: #015067;
+  color: white;
   float: left;
   height: 100%;
+  width: 165px;
 }
 
 #page {
   background-color: #eee;
+  line-height: 18px;
 }
 
 .ui-header .ui-title {
