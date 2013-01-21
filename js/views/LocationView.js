@@ -9,7 +9,7 @@ define(
   function($, _, Backbone, template) {
 
     var LocationView = Backbone.View.extend({
-      el: $('#page'),
+      el: $('#page-content'),
 
       render: function() {
         var locationData = this.dataModel.get('location');

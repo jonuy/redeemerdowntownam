@@ -14,7 +14,7 @@ define(
   function($, _, Backbone, LocationView, ReflectionView, AnnouncementsView, SermonView, OffertoryView, programTemplate) {
 
     var ProgramView = Backbone.View.extend({
-      el: $('#page'),
+      el: $('#page-content'),
 
       render: function() {
         var locationView = new LocationView();

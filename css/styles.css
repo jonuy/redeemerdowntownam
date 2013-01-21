@@ -15,3 +15,19 @@ h2 {
 h3 {
   font-family: 'Donegal One';
 }
+
+#menu {
+  float: left;
+  height: 100%;
+}
+
+#page {
+  background-color: #eee;
+}
+
+.ui-header .ui-title {
+  background-color: #ccc;
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0.4em 0;
+}

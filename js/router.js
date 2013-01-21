@@ -14,6 +14,10 @@ define(
 
   function($, _, Backbone, ProgramModel, AnnouncementsView, LocationView, OffertoryView, ProgramView, ReflectionView, SermonView) {
 
+    // Globals
+    window.isMenuOpen = false;
+
+    // Model
     var programModel = new ProgramModel();
 
     var AppRouter = Backbone.Router.extend({
@@ -27,7 +31,7 @@ define(
         'sermon': 'showSermon',
       },
       showAnnouncements: function() {
-        this.changePage(new AnnouncementView());
+        this.changePage(new AnnouncementsView());
       },
       showLocation: function() {
         this.changePage(new LocationView());
@@ -61,7 +65,30 @@ define(
 
       Backbone.history.start();
 
-      //app_router.navigate('#program', {trigger: true});
+      var pageDiv = $('#page');
+      pageDiv.live('swipeleft', function() {
+        if (isMenuOpen == true) {
+          pageDiv.animate(
+            {marginLeft: '0'},
+            300,
+            function() {
+              isMenuOpen = false;
+            }
+          );
+        }
+      });
+
+      pageDiv.live('swiperight', function() {
+        if (isMenuOpen == false) {
+          pageDiv.animate(
+            {marginLeft: '225px'},
+            300,
+            function() {
+              isMenuOpen = true;
+            }
+          );
+        }
+      });
     };
 
     return {

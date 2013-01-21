@@ -9,7 +9,7 @@ define(
   function($, _, Backbone, template) {
 
     var ReflectionView = Backbone.View.extend({
-      el: $('#page'),
+      el: $('#page-content'),
 
       render: function() {
         var programData = this.dataModel.get('program');
