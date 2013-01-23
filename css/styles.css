@@ -1,5 +1,5 @@
 body {
-  background-color: #015067;
+  background-color: #eee;
   font-family: Verdana;
 }
 
@@ -16,17 +16,21 @@ h3 {
   font-family: 'Donegal One';
 }
 
-#menu {
-  background-color: #015067;
+nav {
+  background-color: #eee;
   color: white;
   float: left;
   height: 100%;
+  position: absolute;
   width: 165px;
+  z-index: 0;
 }
 
 #page {
   background-color: #eee;
   line-height: 18px;
+  position: absolute;
+  z-index: 1;
 }
 
 .ui-header .ui-title {

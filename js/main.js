@@ -3,7 +3,6 @@ require.config({
   paths: {
     backbone: 'libs/backbone/backbone-0.9.9',
     jquery: 'libs/jquery/jquery-1.8.3',
-    jquerymobile: 'libs/jquery-mobile/jquery.mobile-1.2.0',
     underscore: 'libs/underscore/underscore-1.4.3',
     templates: '../templates',
   },
@@ -24,7 +23,6 @@ require.config({
 define(
   [
     'app',
-    'jqm-config',
   ],
   function(App) {
     App.initialize();

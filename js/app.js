@@ -4,7 +4,6 @@ define(
     'underscore',
     'backbone',
     'router',
-    'jquerymobile',
   ],
   function($, _, Backbone, Router) {
 

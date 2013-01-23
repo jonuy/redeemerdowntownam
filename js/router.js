@@ -66,31 +66,7 @@ define(
       Backbone.history.start();
 
       var pageDiv = $('#page');
-      pageDiv.live('swipeleft', function() {
-        if (isMenuOpen == true) {
-          pageDiv.animate(
-            {marginLeft: '0'},
-            300,
-            function() {
-              isMenuOpen = false;
-            }
-          );
-        }
-      });
-
-      pageDiv.live('swiperight', function() {
-        if (isMenuOpen == false) {
-          pageDiv.animate(
-            {marginLeft: '165px'},
-            300,
-            function() {
-              isMenuOpen = true;
-            }
-          );
-        }
-      });
-
-      $('#menu-button').on('tap', function() {
+      $('#menu-button').on('click', function() {
         if (isMenuOpen == true) {
           pageDiv.animate(
             {marginLeft: '0'},
