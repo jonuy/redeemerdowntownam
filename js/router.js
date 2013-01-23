@@ -65,11 +65,11 @@ define(
 
       Backbone.history.start();
 
-      var pageDiv = $('#page');
+      var menuNav = $('#menu-nav');
       $('#menu-button').on('click', function() {
         if (isMenuOpen == true) {
-          pageDiv.animate(
-            {marginLeft: '0'},
+          menuNav.animate(
+            {marginLeft: '-165px'},
             300,
             function() {
               isMenuOpen = false;
@@ -77,8 +77,8 @@ define(
           );
         }
         else {
-          pageDiv.animate(
-            {marginLeft: '165px'},
+          menuNav.animate(
+            {marginLeft: '0'},
             300,
             function() {
               isMenuOpen = true;

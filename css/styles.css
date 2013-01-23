@@ -1,3 +1,36 @@
+/* YUI Reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img { 
+  border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym { border:0;
+}
+/* end YUI Reset */
+
 body {
   background-color: #eee;
   font-family: Verdana;
@@ -6,36 +39,66 @@ body {
 h1 {
   color: #015067;
   font-family: 'Donegal One';
+  font-size: 32px;
+  font-weight: bold;
+  line-height: inherit;
 }
 
 h2 {
   font-family: 'Donegal One';
+  font-size: 20px;
+  font-weight: bold;
+  line-height: normal;
+  padding: 0.4em 0;
 }
 
 h3 {
   font-family: 'Donegal One';
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.4em 0;
 }
 
 nav {
-  background-color: #eee;
+  background-color: #015067;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
   color: white;
   float: left;
   height: 100%;
+  margin-left: -165px;
+  margin-top: 44px;
+  opacity: 0.9;
   position: absolute;
   width: 165px;
-  z-index: 0;
+  z-index: 1;
+}
+
+p {
+  padding: 0 0.4em;
+}
+
+#menu-button {
+  float: left;
 }
 
 #page {
   background-color: #eee;
-  line-height: 18px;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 
-.ui-header .ui-title {
+#page-content {
+  padding: 0 0.8em;
+}
+
+.header {
   background-color: #ccc;
-  font-size: 1.4em;
+  height: 44px;
+  line-height: normal;
   margin: 0;
-  padding: 0.4em 0;
+}
+
+.header h1 {
+  text-align: right;
 }
