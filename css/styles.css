@@ -59,10 +59,14 @@ h3 {
   padding: 0.4em 0;
 }
 
+img {
+  width: 100%;
+}
+
 nav {
   background-color: #015067;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
   color: white;
   float: left;
   height: 100%;
@@ -80,7 +84,17 @@ p {
 }
 
 #menu-button {
+  background: #383838;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#383838));
+  background: -webkit-linear-gradient(top, #000000, #383838);
+  border-radius: 6px;
+  color: white;
   float: left;
+  height: 42px;
+  margin-left: 6px;
+  padding: 0;
+  vertical-align: middle;
+  width: 42px;
 }
 
 #page {
@@ -102,5 +116,6 @@ p {
 }
 
 .header h1 {
+  margin-right: 0.4em;
   text-align: right;
 }

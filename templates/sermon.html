@@ -1,15 +1,14 @@
-<% if (typeof(scripture_verses) != undefined &&
-       typeof(scripture_body) != undefined &&
-       typeof(sermon_title) != undefined &&
-       typeof(sermon_series) != undefined &&
-       typeof(sermon_deliverer) != undefined) { %>
+<% if (typeof(sermon.scripture_verses) != undefined &&
+       typeof(sermon.scripture_body) != undefined &&
+       typeof(sermon.sermon_title) != undefined &&
+       typeof(sermon.sermon_series) != undefined) { %>
 
-<h3>Scripture</h3>
-<p><b><%= scripture_verses %></b></p>
-<p><%= scripture_body %></p>
+<h3>Scripture Reading - <i><%= sermon.scripture_verses %></i></h3>
+<p><%= sermon.scripture_body %></p>
+<i>Reader:</i> The Word of the Lord.<br>
+<i>All:</i> Thanks be to God!
 <p>
-  <i><%= sermon_title %> - <%= sermon_series %></i><br>
-  <%= sermon_deliverer %>
+  <i><%= sermon.sermon_title %> - <%= sermon.sermon_series %></i><br>
 </p>
 <hr>
 
