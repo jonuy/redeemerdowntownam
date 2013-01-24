@@ -1,0 +1,20 @@
+<% if (typeof(prayer_of_confession) != undefined) { %>
+
+<h3>Prayer of Confession</h3>
+<% prayer_of_confession.forEach(function(section) {
+  if(section.leader_all) { %>
+    <i>Leader and All:</i>
+    <p><%= section.leader_all %></p>
+<% }
+  else { %>
+    <i>Leader:</i>
+    <p><%= section.leader %></p>
+    <i>All:</i>
+    <p><%= section.all %></p>
+<% } 
+}); %>
+
+<h3>Silent Confession</h3>
+<hr>
+
+<% } %>
