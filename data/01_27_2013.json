@@ -1,0 +1,33 @@
+{
+  "location": {
+    "time": "9:30 AM",
+    "location_address": "120 W. 14th Street (between 6th and 7th Aves)",
+    "location_name": "The Salvation Army"
+  },
+  "program": {
+    "reflection": "<p>The Christian movement is a degeneracy movement composed of reject and refuse elements of every kind...It is therefore not racially conditioned; it appeals to the disinherited everywhere...It needs a symbol that represents a curse on the well-constituted and dominant...it takes the side of idiots and utters rancor against the gifted, the learned, the independent, for it detects in them the well-constituted and the masterful.</p>&nbsp;&nbsp;- Friedrich Nietzsche, <i>The Will to Power</i><p>By the gospel we must give aid even when we can’t do it without suffering ourselves...how else will we bear one another’s burdens? If we are never obliged to relieve others’ burdens but when we can do it without burdening ourselves, then how do we bear our neighbor’s burdens when we bear no burdens at all?</p>&nbsp;&nbsp;- Jonathan Edwards, <i>The Duty of Charity</i>",
+    "call_to_worship": {
+      "title": "Psalm 86",
+      "sections": [{
+        "leader": "We will praise you, O Lord our God, with our whole hearts; we will glorify your name forever. For you have delivered us from the power of death.",
+        "all": "Bring us your joy, O Lord, for to you we lift up our souls.There is none like you; no deeds can compare with yours."
+      },
+      {
+        "leader": "All the nations you have made will come and worship before you. They will bring glory to your name, for you alone are God.",
+        "all": "Teach us your way, O Lord, and we will live in your truth. Give us undivided hearts that we may fear and praise your great name."
+      }]
+    },
+    "prayer_of_adoration": "Our Father, who art in heaven, hallowed be thy name. Thy kingdom come, thy will be done, on earth as it is in heaven. Give us this day our daily bread, and forgive us our debts as we forgive our debtors. And lead us not into temptation, but deliver us from evil. For thine is the kingdom, and the power, and the glory, forever and ever. Amen.",
+    "prayer_of_confession": [{
+      "leader": "O Lord our God, you have created us and bought us with a price, so we are not our own, and therefore we should wholly live to obey, trust and love you.",
+      "all": "But we have not obeyed you: we have treated ourselves as kings instead of you; we have exalted and pleased ourselves."
+    },
+    {
+      "leader": "And we have not trusted you: though your promises are great and precious and never fail, yet we have only haltingly relied on them, and in anxiety and fear have not put our full hope in you.",
+      "all":  "And we have not loved you: though you are infinitely good, and you are love itself, yet we have not made you our full desire and delight, and instead have clung to idols that do not live."
+    },
+    {
+      "leader_all": "We have sinned secretly and openly, half-consciously and deliberately, in attitude and in action, against your law and your love. But now, O God, let your face shine upon us to give us pardon and freedom! Plough your grace deep into us until we become a garden of holiness and joy in you. In Jesus’ name we pray. Amen."
+    }]
+  }
+}

@@ -1,0 +1,16 @@
+<% if (typeof(call_to_worship) != undefined) { %>
+
+<h3>Call To Worship - <i><%= call_to_worship.title %></i></h3>
+<% 
+  call_to_worship.sections.forEach(function(section) {
+%>
+    <b>Leader:</b>
+    <p><%= section.leader %></p>
+    <b>All:</b>
+    <p><%= section.all %></p>
+<%
+  });
+%>
+<hr>
+
+<% } %>
