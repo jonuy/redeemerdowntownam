@@ -9,11 +9,14 @@ define(
     'views/LocationView',
     'views/ProgramSectionView',
     // Templates
+    'text!templates/callToWorship.html',
+    'text!templates/doxology.html',
+    'text!templates/offertory.html',
+    'text!templates/prayerAdoration.html',
+    'text!templates/reflection.html',
+    'text!templates/sermon.html',
     'text!templates/welcomeAnnouncements.html',
     'text!templates/whereIsService.html',
-    'text!templates/offertory.html',
-    'text!templates/reflection.html',
-    'text!templates/sermon.html'
   ],
 
   function($, _, Backbone, 
@@ -23,11 +26,14 @@ define(
            LocationView,
            ProgramSectionView,
            // Templates
-           welcomeTemplate,
-           locationTemplate,
+           callToWorshipTemplate,
+           doxologyTemplate,
            offertoryTemplate,
+           prayerAdorationTemplate,
            reflectionTemplate,
-           sermonTemplate) {
+           sermonTemplate,
+           welcomeTemplate,
+           whereIsServiceTemplate) {
 
     // Globals
     window.isMenuOpen = false;
@@ -67,6 +73,9 @@ define(
         var views = [
           new LocationView(),
           new ProgramSectionView({template:reflectionTemplate}),
+          new ProgramSectionView({template:callToWorshipTemplate}),
+          new ProgramSectionView({template:prayerAdorationTemplate}),
+          new ProgramSectionView({template:doxologyTemplate}),
           new ProgramSectionView({template:welcomeTemplate}),
           new ProgramSectionView({template:sermonTemplate}),
           new ProgramSectionView({template:offertoryTemplate}),
