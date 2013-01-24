@@ -14,6 +14,7 @@ define(
     'text!templates/doxology.html',
     'text!templates/encouragement.html',
     'text!templates/offertory.html',
+    'text!templates/openingHymns.html',
     'text!templates/passingPeace.html',
     'text!templates/prayerAdoration.html',
     'text!templates/prayerConfession.html',
@@ -36,6 +37,7 @@ define(
            doxologyTemplate,
            encouragementTemplate,
            offertoryTemplate,
+           openingHymnsTemplate,
            passingPeaceTemplate,
            prayerAdorationTemplate,
            prayerConfessionTemplate,
@@ -83,6 +85,7 @@ define(
         var views = [
           new LocationView(),
           new ProgramSectionView({template:reflectionTemplate}),
+          new ProgramSectionView({template:openingHymnsTemplate}),
           new ProgramSectionView({template:callToWorshipTemplate}),
           new ProgramSectionView({template:prayerAdorationTemplate}),
           new ProgramSectionView({template:doxologyTemplate}),

@@ -6,6 +6,14 @@
   },
   "program": {
     "reflection": "<p>The Christian movement is a degeneracy movement composed of reject and refuse elements of every kind...It is therefore not racially conditioned; it appeals to the disinherited everywhere...It needs a symbol that represents a curse on the well-constituted and dominant...it takes the side of idiots and utters rancor against the gifted, the learned, the independent, for it detects in them the well-constituted and the masterful.</p>&nbsp;&nbsp;- Friedrich Nietzsche, <i>The Will to Power</i><p>By the gospel we must give aid even when we can't do it without suffering ourselves...how else will we bear one another's burdens? If we are never obliged to relieve others' burdens but when we can do it without burdening ourselves, then how do we bear our neighbor's burdens when we bear no burdens at all?</p>&nbsp;&nbsp;- Jonathan Edwards, <i>The Duty of Charity</i>",
+    "opening_hymns": [
+      {
+        "img": "css/img/OpeningHymn1_01-27-13.jpg"
+      },
+      {
+        "img": "css/img/OpeningHymn2_01-27-13.jpg"
+      }
+    ],
     "call_to_worship": {
       "title": "Psalm 86",
       "sections": [{
