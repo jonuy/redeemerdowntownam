@@ -75,6 +75,7 @@ nav {
 }
 
 p {
+  margin: 1em 0;
   padding: 0 0.4em;
 }
 
@@ -85,6 +86,7 @@ p {
 #page {
   background-color: #eee;
   position: absolute;
+  width: 100%;
   z-index: 0;
 }
 

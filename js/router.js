@@ -3,16 +3,31 @@ define(
     'jquery',
     'underscore',
     'backbone',
+    // Models
     'models/ProgramModel',
-    'views/AnnouncementsView',
+    // Views
     'views/LocationView',
-    'views/OffertoryView',
-    'views/ProgramView',
-    'views/ReflectionView',
-    'views/SermonView',
+    'views/ProgramSectionView',
+    // Templates
+    'text!templates/welcomeAnnouncements.html',
+    'text!templates/whereIsService.html',
+    'text!templates/offertory.html',
+    'text!templates/reflection.html',
+    'text!templates/sermon.html'
   ],
 
-  function($, _, Backbone, ProgramModel, AnnouncementsView, LocationView, OffertoryView, ProgramView, ReflectionView, SermonView) {
+  function($, _, Backbone, 
+           // Models
+           ProgramModel,
+           // Views
+           LocationView,
+           ProgramSectionView,
+           // Templates
+           welcomeTemplate,
+           locationTemplate,
+           offertoryTemplate,
+           reflectionTemplate,
+           sermonTemplate) {
 
     // Globals
     window.isMenuOpen = false;
@@ -31,28 +46,52 @@ define(
         'sermon': 'showSermon',
       },
       showAnnouncements: function() {
-        this.changePage(new AnnouncementsView());
+        var views = [
+          new ProgramSectionView({template:welcomeTemplate})
+        ];
+        this.changePage(views);
       },
       showLocation: function() {
-        this.changePage(new LocationView());
+        var views = [
+          new LocationView()
+        ];
+        this.changePage(views);
       },
       showOffertory: function() {
-        this.changePage(new OffertoryView);
+        var views = [
+          new ProgramSectionView({template:offertoryTemplate})
+        ];
+        this.changePage(views);
       },
       showProgram: function() {
-        this.changePage(new ProgramView());
+        var views = [
+          new LocationView(),
+          new ProgramSectionView({template:reflectionTemplate}),
+          new ProgramSectionView({template:welcomeTemplate}),
+          new ProgramSectionView({template:sermonTemplate}),
+          new ProgramSectionView({template:offertoryTemplate}),
+        ];
+        this.changePage(views);
       },
       showReflection: function() {
-        this.changePage(new ReflectionPage());
+        var views = [
+          new ProgramSectionView({template:reflectionTemplate})
+        ];
+        this.changePage(views);
       },
       showSermon: function() {
-        this.changePage(new SermonView());
+        var views = [
+          new ProgramSectionView({template:sermonTemplate})
+        ];
+        this.changePage(views);
       },
-      changePage: function(view) {
+      changePage: function(views) {
 
         var onModelFetched = function(data) {
-          view.dataModel = programModel;
-          view.render();
+          views.forEach(function(view) {
+            view.dataModel = programModel;
+            view.render();
+          });
         };
 
         programModel.fetch({success:onModelFetched});
