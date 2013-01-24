@@ -3,7 +3,7 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/reflectionTemplate.html'
+    'text!templates/reflection.html'
   ],
 
   function($, _, Backbone, template) {

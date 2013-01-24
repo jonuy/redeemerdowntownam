@@ -3,7 +3,7 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/welcomeAnnouncementsTemplate.html'
+    'text!templates/welcomeAnnouncements.html'
   ],
 
   function($, _, Backbone, template) {

@@ -3,7 +3,7 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/whereIsServiceTemplate.html',
+    'text!templates/whereIsService.html',
   ],
 
   function($, _, Backbone, template) {

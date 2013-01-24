@@ -3,7 +3,7 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/offertoryTemplate.html'
+    'text!templates/offertory.html'
   ],
 
   function($, _, Backbone, template) {

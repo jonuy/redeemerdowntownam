@@ -8,7 +8,7 @@ define(
     'views/AnnouncementsView',
     'views/SermonView',
     'views/OffertoryView',
-    'text!templates/programTemplate.html',
+    'text!templates/program.html',
   ],
 
   function($, _, Backbone, LocationView, ReflectionView, AnnouncementsView, SermonView, OffertoryView, programTemplate) {

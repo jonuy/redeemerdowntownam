@@ -3,7 +3,7 @@ define(
     'jquery',
     'underscore',
     'backbone',
-    'text!templates/sermonTemplate.html'
+    'text!templates/sermon.html'
   ],
 
   function($, _, Backbone, template) {
