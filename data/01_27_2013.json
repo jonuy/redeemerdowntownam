@@ -5,7 +5,7 @@
     "location_name": "The Salvation Army"
   },
   "program": {
-    "reflection": "<p>The Christian movement is a degeneracy movement composed of reject and refuse elements of every kind...It is therefore not racially conditioned; it appeals to the disinherited everywhere...It needs a symbol that represents a curse on the well-constituted and dominant...it takes the side of idiots and utters rancor against the gifted, the learned, the independent, for it detects in them the well-constituted and the masterful.</p>&nbsp;&nbsp;- Friedrich Nietzsche, <i>The Will to Power</i><p>By the gospel we must give aid even when we can’t do it without suffering ourselves...how else will we bear one another’s burdens? If we are never obliged to relieve others’ burdens but when we can do it without burdening ourselves, then how do we bear our neighbor’s burdens when we bear no burdens at all?</p>&nbsp;&nbsp;- Jonathan Edwards, <i>The Duty of Charity</i>",
+    "reflection": "<p>The Christian movement is a degeneracy movement composed of reject and refuse elements of every kind...It is therefore not racially conditioned; it appeals to the disinherited everywhere...It needs a symbol that represents a curse on the well-constituted and dominant...it takes the side of idiots and utters rancor against the gifted, the learned, the independent, for it detects in them the well-constituted and the masterful.</p>&nbsp;&nbsp;- Friedrich Nietzsche, <i>The Will to Power</i><p>By the gospel we must give aid even when we can't do it without suffering ourselves...how else will we bear one another's burdens? If we are never obliged to relieve others' burdens but when we can do it without burdening ourselves, then how do we bear our neighbor's burdens when we bear no burdens at all?</p>&nbsp;&nbsp;- Jonathan Edwards, <i>The Duty of Charity</i>",
     "call_to_worship": {
       "title": "Psalm 86",
       "sections": [{
@@ -27,7 +27,20 @@
       "all":  "And we have not loved you: though you are infinitely good, and you are love itself, yet we have not made you our full desire and delight, and instead have clung to idols that do not live."
     },
     {
-      "leader_all": "We have sinned secretly and openly, half-consciously and deliberately, in attitude and in action, against your law and your love. But now, O God, let your face shine upon us to give us pardon and freedom! Plough your grace deep into us until we become a garden of holiness and joy in you. In Jesus’ name we pray. Amen."
-    }]
+      "leader_all": "We have sinned secretly and openly, half-consciously and deliberately, in attitude and in action, against your law and your love. But now, O God, let your face shine upon us to give us pardon and freedom! Plough your grace deep into us until we become a garden of holiness and joy in you. In Jesus' name we pray. Amen."
+    }],
+    "words_of_encouragement": {
+      "title": "Psalm 103:8-10",
+      "body": "The Lord is compassionate and gracious, slow to anger, abounding in love. He will not always accuse, nor will he harbor his anger forever; he does not treat us as our sins deserve or repay us according to our iniquities."
+    },
+    "welcome_and_announcements": "Children K-5 are dismissed at this time to be escorted by their teachers to Railton Hall.",
+    "sermon": {
+      "scripture_verses": "Acts 4:36-5:14",
+      "scripture_body": "4:36 Joseph, a Levite from Cyprus, whom the apostles called Barnabas (which means Son of Encouragement), 37 sold a field he owned and brought the money and put it at the apostles' feet.<br><br>5:1 Now a man named Ananias, together with his wife Sapphira, also sold a piece of property. 2 With his wife's full knowledge he kept back part of the money for himself, but brought the rest and put it at the apostles' feet.3 Then Peter said, \"Ananias, how is it that Satan has so filled your heart that you have lied to the Holy Spirit and have kept for yourself some of the money you received for the land? 4 Didn't it belong to you before it was sold? And after it was sold, wasn't the money at your disposal? What made you think of doing such a thing? You have not lied to men but to God.\" 5 When Ananias heard this, he fell down and died. And great fear seized all who heard what had happened. 6 Then the young men came forward, wrapped up his body, and carried him out and buried him. 7 About three hours later his wife came in, not knowing what had happened. 8 Peter asked her, \"Tell me, is this the price you and Ananias got for the land?\"<br><br>\"Yes,\" she said, \"that is the price.\" 9 Peter said to her, \"How could you agree to test the Spirit of the Lord? Look! The feet of the men who buried your husband are at the door, and they will carry you out also.\" 10 At that moment she fell down at his feet and died. Then the young men came in and, finding her dead, carried her out and buried her beside her husband. 11 Great fear seized the whole church and all who heard about these events. 12 The apostles performed many miraculous signs and wonders among the people. And all the believers used to meet together in Solomon's Colonnade. 13 No one else dared join them, even though they were highly regarded by the people. 14 Nevertheless, more and more men and women believed in the Lord and were added to their number. (NIV)",
+      "sermon_title": "Lying to the Spirit",
+      "sermon_series": "8th Sermon in Series: Acts—The Gospel in the City"
+    },
+    "offertory": "Hungarian Folk Melodies, Sz 53 — Béla Bartók",
+    "prayer_of_thanksgiving": "Almighty God, Father of all mercies, we your unworthy servants give you humble thanks for all your goodness and loving-kindness to us and to all whom you have made. We bless you for our creation, preservation, and all the blessings of this life; but above all for your immeasurable love in the redemption of the world by our Lord Jesus Christ; for the means of grace, and for the hope of glory. And, we pray, give us such an awareness of your mercies, that with truly thankful hearts we may show forth your praise, not only with our lips, but in our lives, by giving up ourselves to your service, and by walking before you in holiness and righteousness all our days; through Jesus Christ our Lord, to whom, with you and the Holy Spirit, be honor and glory throughout all ages. Amen."
   }
 }
