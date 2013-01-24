@@ -3,17 +3,42 @@ define(
     'jquery',
     'underscore',
     'backbone',
+    // Models
     'models/ProgramModel',
-    'views/AnnouncementsView',
+    // Views
     'views/LocationView',
-    'views/OffertoryView',
-    'views/ProgramView',
-    'views/ReflectionView',
-    'views/SermonView',
+    'views/ProgramSectionView',
+    // Templates
+    'text!templates/callToWorship.html',
+    'text!templates/doxology.html',
+    'text!templates/offertory.html',
+    'text!templates/prayerAdoration.html',
+    'text!templates/reflection.html',
+    'text!templates/sermon.html',
+    'text!templates/welcomeAnnouncements.html',
+    'text!templates/whereIsService.html',
   ],
 
-  function($, _, Backbone, ProgramModel, AnnouncementsView, LocationView, OffertoryView, ProgramView, ReflectionView, SermonView) {
+  function($, _, Backbone, 
+           // Models
+           ProgramModel,
+           // Views
+           LocationView,
+           ProgramSectionView,
+           // Templates
+           callToWorshipTemplate,
+           doxologyTemplate,
+           offertoryTemplate,
+           prayerAdorationTemplate,
+           reflectionTemplate,
+           sermonTemplate,
+           welcomeTemplate,
+           whereIsServiceTemplate) {
 
+    // Globals
+    window.isMenuOpen = false;
+
+    // Model
     var programModel = new ProgramModel();
 
     var AppRouter = Backbone.Router.extend({
@@ -27,28 +52,55 @@ define(
         'sermon': 'showSermon',
       },
       showAnnouncements: function() {
-        this.changePage(new AnnouncementView());
+        var views = [
+          new ProgramSectionView({template:welcomeTemplate})
+        ];
+        this.changePage(views);
       },
       showLocation: function() {
-        this.changePage(new LocationView());
+        var views = [
+          new LocationView()
+        ];
+        this.changePage(views);
       },
       showOffertory: function() {
-        this.changePage(new OffertoryView);
+        var views = [
+          new ProgramSectionView({template:offertoryTemplate})
+        ];
+        this.changePage(views);
       },
       showProgram: function() {
-        this.changePage(new ProgramView());
+        var views = [
+          new LocationView(),
+          new ProgramSectionView({template:reflectionTemplate}),
+          new ProgramSectionView({template:callToWorshipTemplate}),
+          new ProgramSectionView({template:prayerAdorationTemplate}),
+          new ProgramSectionView({template:doxologyTemplate}),
+          new ProgramSectionView({template:welcomeTemplate}),
+          new ProgramSectionView({template:sermonTemplate}),
+          new ProgramSectionView({template:offertoryTemplate}),
+        ];
+        this.changePage(views);
       },
       showReflection: function() {
-        this.changePage(new ReflectionPage());
+        var views = [
+          new ProgramSectionView({template:reflectionTemplate})
+        ];
+        this.changePage(views);
       },
       showSermon: function() {
-        this.changePage(new SermonView());
+        var views = [
+          new ProgramSectionView({template:sermonTemplate})
+        ];
+        this.changePage(views);
       },
-      changePage: function(view) {
+      changePage: function(views) {
 
         var onModelFetched = function(data) {
-          view.dataModel = programModel;
-          view.render();
+          views.forEach(function(view) {
+            view.dataModel = programModel;
+            view.render();
+          });
         };
 
         programModel.fetch({success:onModelFetched});
@@ -61,7 +113,28 @@ define(
 
       Backbone.history.start();
 
-      //app_router.navigate('#program', {trigger: true});
+      var menuNav = $('#menu-nav');
+      $('#menu-button').on('click', function() {
+        if (isMenuOpen == true) {
+          menuNav.animate(
+            {marginLeft: '-165px'},
+            300,
+            function() {
+              isMenuOpen = false;
+            }
+          );
+        }
+        else {
+          menuNav.animate(
+            {marginLeft: '0'},
+            300,
+            function() {
+              isMenuOpen = true;
+            }
+          );
+        }
+      });
+
     };
 
     return {
