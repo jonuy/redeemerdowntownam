@@ -6,6 +6,7 @@ define(
     // Models
     'models/ProgramModel',
     // Views
+    'views/GenericImageView',
     'views/LocationView',
     'views/ProgramSectionView',
     // Templates
@@ -29,6 +30,7 @@ define(
            // Models
            ProgramModel,
            // Views
+           GenericImageView,
            LocationView,
            ProgramSectionView,
            // Templates
@@ -90,12 +92,15 @@ define(
           new ProgramSectionView({template:prayerAdorationTemplate}),
           new ProgramSectionView({template:doxologyTemplate}),
           new ProgramSectionView({template:prayerConfessionTemplate}),
+          new GenericImageView({section:'confessional_response'}),
           new ProgramSectionView({template:encouragementTemplate}),
+          new GenericImageView({section:'post_confessional'}),
           new ProgramSectionView({template:passingPeaceTemplate}),
           new ProgramSectionView({template:welcomeTemplate}),
           new ProgramSectionView({template:sermonTemplate}),
           new ProgramSectionView({template:offertoryTemplate}),
           new ProgramSectionView({template:prayerThanksgivingTemplate}),
+          new GenericImageView({section:'closing_hymn'}),
           new ProgramSectionView({template:benedictionDismissalTemplate}),
         ];
         this.changePage(views);
