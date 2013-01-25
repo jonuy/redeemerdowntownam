@@ -6,6 +6,7 @@ define(
     // Models
     'models/ProgramModel',
     // Views
+    'views/GenericImageView',
     'views/LocationView',
     'views/ProgramSectionView',
     // Templates
@@ -29,6 +30,7 @@ define(
            // Models
            ProgramModel,
            // Views
+           GenericImageView,
            LocationView,
            ProgramSectionView,
            // Templates
@@ -56,16 +58,65 @@ define(
     var AppRouter = Backbone.Router.extend({
       routes: {
         '': 'showProgram',
-        'announcements': 'showAnnouncements',
+        'benedictionDismissal': 'showBenedictionDismissal',
+        'callToWorship': 'showCallToWorship',
+        'doxology': 'showDoxology',
         'location': 'showLocation',
         'offertory': 'showOffertory',
+        'openingHymns': 'showOpeningHymns',
+        'passingPeace': 'showPassingPeace',
+        'prayerAdoration': 'showPrayerAdoration',
+        'prayerConfession': 'showPrayerConfession',
+        'prayerThanksgiving': 'showPrayerThanksgiving',
+        'encouragement': 'showEncouragement',
         'program': 'showProgram',
         'reflection': 'showReflection',
         'sermon': 'showSermon',
+        'welcome': 'showWelcome',
       },
-      showAnnouncements: function() {
+      showProgram: function() {
         var views = [
-          new ProgramSectionView({template:welcomeTemplate})
+          new LocationView(),
+          new ProgramSectionView({template:reflectionTemplate}),
+          new ProgramSectionView({template:openingHymnsTemplate}),
+          new ProgramSectionView({template:callToWorshipTemplate}),
+          new ProgramSectionView({template:prayerAdorationTemplate}),
+          new ProgramSectionView({template:doxologyTemplate}),
+          new ProgramSectionView({template:prayerConfessionTemplate}),
+          new GenericImageView({section:'confessional_response'}),
+          new ProgramSectionView({template:encouragementTemplate}),
+          new GenericImageView({section:'post_confessional'}),
+          new ProgramSectionView({template:passingPeaceTemplate}),
+          new ProgramSectionView({template:welcomeTemplate}),
+          new ProgramSectionView({template:sermonTemplate}),
+          new ProgramSectionView({template:offertoryTemplate}),
+          new ProgramSectionView({template:prayerThanksgivingTemplate}),
+          new GenericImageView({section:'closing_hymn'}),
+          new ProgramSectionView({template:benedictionDismissalTemplate}),
+        ];
+        this.changePage(views);
+      },
+      showBenedictionDismissal: function() {
+        var views = [
+          new ProgramSectionView({template:benedictionDismissalTemplate})
+        ];
+        this.changePage(views);
+      },
+      showCallToWorship: function() {
+        var views = [
+          new ProgramSectionView({template:callToWorshipTemplate})
+        ];
+        this.changePage(views);
+      },
+      showDoxology: function() {
+        var views = [
+          new ProgramSectionView({template:doxologyTemplate})
+        ];
+        this.changePage(views);
+      },
+      showEncouragement: function() {
+        var views = [
+          new ProgramSectionView({template:encouragementTemplate})
         ];
         this.changePage(views);
       },
@@ -81,22 +132,33 @@ define(
         ];
         this.changePage(views);
       },
-      showProgram: function() {
+      showOpeningHymns: function() {
         var views = [
-          new LocationView(),
-          new ProgramSectionView({template:reflectionTemplate}),
-          new ProgramSectionView({template:openingHymnsTemplate}),
-          new ProgramSectionView({template:callToWorshipTemplate}),
-          new ProgramSectionView({template:prayerAdorationTemplate}),
-          new ProgramSectionView({template:doxologyTemplate}),
-          new ProgramSectionView({template:prayerConfessionTemplate}),
-          new ProgramSectionView({template:encouragementTemplate}),
-          new ProgramSectionView({template:passingPeaceTemplate}),
-          new ProgramSectionView({template:welcomeTemplate}),
-          new ProgramSectionView({template:sermonTemplate}),
-          new ProgramSectionView({template:offertoryTemplate}),
-          new ProgramSectionView({template:prayerThanksgivingTemplate}),
-          new ProgramSectionView({template:benedictionDismissalTemplate}),
+          new ProgramSectionView({template:openingHymnsTemplate})
+        ];
+        this.changePage(views);
+      },
+      showPassingPeace: function() {
+        var views = [
+          new ProgramSectionView({template:passingPeaceTemplate})
+        ];
+        this.changePage(views);
+      },
+      showPrayerAdoration: function() {
+        var views = [
+          new ProgramSectionView({template:prayerAdorationTemplate})
+        ];
+        this.changePage(views);
+      },
+      showPrayerConfession: function() {
+        var views = [
+          new ProgramSectionView({template:prayerConfessionTemplate})
+        ];
+        this.changePage(views);
+      },
+      showPrayerThanksgiving: function() {
+        var views = [
+          new ProgramSectionView({template:prayerThanksgivingTemplate})
         ];
         this.changePage(views);
       },
@@ -112,7 +174,15 @@ define(
         ];
         this.changePage(views);
       },
+      showWelcome: function() {
+        var views = [
+          new ProgramSectionView({template:welcomeTemplate})
+        ];
+        this.changePage(views);
+      },
       changePage: function(views) {
+        // Empty contents of page before rendering new views
+        $('#page-content').empty();
 
         var onModelFetched = function(data) {
           views.forEach(function(view) {
@@ -153,6 +223,40 @@ define(
         }
       });
 
+      // Clicking on header will scroll to top
+      $('#header h1').click(function() {
+        $('body').scrollTop(0);
+      })
+
+      // TODO: dynamically generate menu items, pages, and order
+      var menuItems = [
+        {'program' : 'ALL'},
+        {'location' : 'Location'},
+        {'reflection': 'Reflection'},
+        {'openingHymns': 'Opening Hymns'},
+        {'callToWorship': 'Call To Worship'},
+        {'prayerAdoration': 'Prayer of Adoration'},
+        {'doxology': 'Doxology'},
+        {'offertory' : 'Offertory'},
+        {'prayerConfession': 'Prayer of Confession'},
+        {'encouragement': 'Words of Encouragement'},
+        {'passingPeace': 'Passing of the Peace'},
+        {'welcome': 'Welcome & Announcements'},
+        {'sermon': 'Sermon'},
+        {'offertory': 'Offertory'},
+        {'prayerThanksgiving': 'Prayer of Thanksgiving'},
+        {'benedictionDismissal': 'Benediction & Dismissal'},
+      ];
+      var menuList = $('#menu-list');
+      for(var i = 0; i < menuItems.length; i++) {
+
+        for(var key in menuItems[i]) {
+          var route = key;
+          var displayName = menuItems[i][key];
+        }
+
+        menuList.append('<li><a href="#'+route+'">'+displayName+'</a></li>');
+      }
     };
 
     return {
