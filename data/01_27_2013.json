@@ -37,9 +37,15 @@
     {
       "leader_all": "We have sinned secretly and openly, half-consciously and deliberately, in attitude and in action, against your law and your love. But now, O God, let your face shine upon us to give us pardon and freedom! Plough your grace deep into us until we become a garden of holiness and joy in you. In Jesus' name we pray. Amen."
     }],
+    "confessional_response": {
+      "img": "css/img/ConfessionalResponse_01-27-13.jpg"
+    },
     "words_of_encouragement": {
       "title": "Psalm 103:8-10",
       "body": "The Lord is compassionate and gracious, slow to anger, abounding in love. He will not always accuse, nor will he harbor his anger forever; he does not treat us as our sins deserve or repay us according to our iniquities."
+    },
+    "post_confessional": {
+      "img": "css/img/PostConfessional_01-27-13.jpg"
     },
     "welcome_and_announcements": "Children K-5 are dismissed at this time to be escorted by their teachers to Railton Hall.",
     "sermon": {
@@ -49,6 +55,9 @@
       "sermon_series": "8th Sermon in Series: Acts—The Gospel in the City"
     },
     "offertory": "Hungarian Folk Melodies, Sz 53 — Béla Bartók",
-    "prayer_of_thanksgiving": "Almighty God, Father of all mercies, we your unworthy servants give you humble thanks for all your goodness and loving-kindness to us and to all whom you have made. We bless you for our creation, preservation, and all the blessings of this life; but above all for your immeasurable love in the redemption of the world by our Lord Jesus Christ; for the means of grace, and for the hope of glory. And, we pray, give us such an awareness of your mercies, that with truly thankful hearts we may show forth your praise, not only with our lips, but in our lives, by giving up ourselves to your service, and by walking before you in holiness and righteousness all our days; through Jesus Christ our Lord, to whom, with you and the Holy Spirit, be honor and glory throughout all ages. Amen."
+    "prayer_of_thanksgiving": "Almighty God, Father of all mercies, we your unworthy servants give you humble thanks for all your goodness and loving-kindness to us and to all whom you have made. We bless you for our creation, preservation, and all the blessings of this life; but above all for your immeasurable love in the redemption of the world by our Lord Jesus Christ; for the means of grace, and for the hope of glory. And, we pray, give us such an awareness of your mercies, that with truly thankful hearts we may show forth your praise, not only with our lips, but in our lives, by giving up ourselves to your service, and by walking before you in holiness and righteousness all our days; through Jesus Christ our Lord, to whom, with you and the Holy Spirit, be honor and glory throughout all ages. Amen.",
+    "closing_hymn": {
+      "img": "css/img/ClosingHymn_01-27-13.jpg"
+    }
   }
 }
