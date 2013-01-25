@@ -74,6 +74,7 @@ nav {
   margin-left: -165px;
   margin-top: 44px;
   opacity: 0.9;
+  overflow-y: scroll;
   position: fixed;
   width: 165px;
   z-index: 1;
@@ -92,6 +93,18 @@ p {
   padding: 0 6px;
   vertical-align: middle;
   width: 42px;
+}
+
+#menu-list li {
+  border-bottom: white 1px solid;
+}
+
+#menu-list a {
+  color: white;
+  display: block;
+  font-family: 'Donegal One';
+  padding: 16px 6px;
+  text-decoration: none;
 }
 
 #page {
