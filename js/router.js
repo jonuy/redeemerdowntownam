@@ -183,7 +183,7 @@ define(
       changePage: function(views) {
         // Empty contents of page before rendering new views
         $('#page-content').empty();
-
+      
         var onModelFetched = function(data) {
           views.forEach(function(view) {
             view.dataModel = programModel;
@@ -205,8 +205,9 @@ define(
       $('#menu-button').on('click', function() {
         if (isMenuOpen == true) {
           menuNav.animate(
-            {marginLeft: '-165px'},
-            300,
+            {marginLeft: '-400px'},
+            0,
+            //set to 0 so menu disappears instantly
             function() {
               isMenuOpen = false;
             }
@@ -230,14 +231,14 @@ define(
 
       // TODO: dynamically generate menu items, pages, and order
       var menuItems = [
-        {'program' : 'ALL'},
-        {'location' : 'Location'},
+        {'program': 'ALL'},
+        {'location': 'Location'},
         {'reflection': 'Reflection'},
         {'openingHymns': 'Opening Hymns'},
         {'callToWorship': 'Call To Worship'},
         {'prayerAdoration': 'Prayer of Adoration'},
         {'doxology': 'Doxology'},
-        {'offertory' : 'Offertory'},
+        {'offertory': 'Offertory'},
         {'prayerConfession': 'Prayer of Confession'},
         {'encouragement': 'Words of Encouragement'},
         {'passingPeace': 'Passing of the Peace'},

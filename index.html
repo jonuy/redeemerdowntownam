@@ -8,6 +8,25 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link href='http://fonts.googleapis.com/css?family=Donegal+One' rel='stylesheet' type='text/css'>
 
+<style>
+/* Swipe 2 required styles */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+/* END required styles */
+</style>
+
   <script data-main="js/main" src="js/libs/require/require-2.1.2.js"></script>
 </head>
 <body>
@@ -18,10 +37,31 @@
   <div id="page">
     <div id="header" class="header">
       <img id="menu-button" src="css/img/nav.png"/>
-      <h1>DTAM</h1>
+      <button onclick='mySwipe.prev()'> < </button> 
+      <button onclick='mySwipe.next()'> > </button>
     </div>
-    <div id="page-content">
+    <div id='mySwipe' style='width:100%;margin:0 auto'>
+      <div id="page-content" class='swipe-wrap'>
+      </div>
     </div>
   </div>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src='js/swipe.js'></script>
+<script>
+
+// pure JS
+var elem = document.getElementById('mySwipe'); // $('#mySwipe')[0] in jQuery
+window.mySwipe = new Swipe(elem);
+
+// with jQuery
+// $('#mySwipe').Swipe();
+// window.mySwipe = $('#mySwipe').data('Swipe');
+
+</script>
+
+
 </body>
 </html>
