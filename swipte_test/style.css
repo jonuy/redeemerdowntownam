@@ -39,7 +39,7 @@ body {
 h1 {
   color: #015067;
   font-family: 'Donegal One';
-  font-size: 32px;
+  font-size: 20px;
   font-weight: bold;
   line-height: inherit;
 }
@@ -85,52 +85,9 @@ p {
   padding: 0 0.4em;
 }
 
-#menu-button {
-  border-right: #015067 1px solid;
-  color: white;
-  float: left;
-  height: 42px;
-  padding: 0 6px;
-  vertical-align: middle;
-  width: 42px;
-}
 
-#menu-list li {
-  border-bottom: white 1px solid;
-}
-
-#menu-list a {
-  color: white;
-  display: block;
-  font-family: 'Donegal One';
-  padding: 16px 6px;
-  text-decoration: none;
-}
-
-#page {
-  background-color: #eee;
-  position: absolute;
-  width: 100%;
-  z-index: 0;
-}
-
-#page-content {
-  margin-top: 44px;
-  padding: 0 0.8em;
-}
-
-.header {
-  background-color: #ccc;
-  height: 44px;
-  line-height: normal;
-  margin: 0;
-  position: fixed;
-  width: 100%;
-}
-
-.header h1 {
-  margin-right: 0.4em;
-  text-align: right;
+html, body {
+  background: #ffffff;
 }
 
 #console {
