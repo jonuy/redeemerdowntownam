@@ -97,6 +97,10 @@ p {
   border-bottom: white 1px solid;
 }
 
+#menu-list li:last-child {
+  margin-bottom: 44px;
+}
+
 #menu-list a {
   color: white;
   display: block;

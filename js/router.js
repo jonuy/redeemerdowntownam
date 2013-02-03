@@ -108,6 +108,10 @@ define(
           new ProgramSectionView({template:benedictionDismissalTemplate}),
         ];
         this.changePage(views);
+
+        if (isMenuOpen) {
+          toggleNavMenu();
+        }
       },
       showBenedictionDismissal: function() {
         $('#benediction').scrollView();
