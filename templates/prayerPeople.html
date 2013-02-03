@@ -1,0 +1,23 @@
+<% if (typeof(prayers_of_the_peopld) != undefined) { %>
+
+<h3>Prayers of the People</h3>
+<% prayers_of_the_people.forEach(function(section) {
+  if(section.leader_all) { %>
+    <i>Leader and All:</i>
+    <p><%= section.leader_all %></p>
+<% }
+  else { 
+    if (section.leader) { %>
+    <i>Leader:</i><br>
+    <%= section.leader %><br><br>
+    <% } %>
+    <% if (section.all) { %>
+    <i>All:</i><br>
+    <%= section.all %><br><br>
+    <% } %>
+<% } 
+}); %>
+
+<hr>
+
+<% } %>

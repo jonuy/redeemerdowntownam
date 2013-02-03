@@ -1,14 +1,16 @@
 <% if (typeof(prayer_of_confession) != undefined) { %>
 
-<h3>Prayer of Confession</h3>
+<h3 id="prayer-of-confession">Prayer of Confession</h3>
 <% prayer_of_confession.forEach(function(section) {
   if(section.leader_all) { %>
     <i>Leader and All:</i>
     <p><%= section.leader_all %></p>
 <% }
-  else { %>
+  else { 
+    if (section.leader) { %>
     <i>Leader:</i>
     <p><%= section.leader %></p>
+    <% } %>
     <i>All:</i>
     <p><%= section.all %></p>
 <% } 

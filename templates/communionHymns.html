@@ -1,0 +1,10 @@
+<% if (typeof(communion_hymns) != undefined) { %>
+
+<h3>Communion Hymns</h3>
+<% communion_hymns.forEach(function(hymn) { %>
+    <img src="<%= hymn.img %>"/><br><br>
+<% }); %>
+
+<hr>
+
+<% } %>

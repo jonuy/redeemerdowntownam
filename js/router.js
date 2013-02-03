@@ -12,6 +12,9 @@ define(
     // Templates
     'text!templates/benedictionDismissal.html',
     'text!templates/callToWorship.html',
+    'text!templates/communionHymns.html',
+    'text!templates/communionPreparation.html',
+    'text!templates/confessionFaith.html',
     'text!templates/doxology.html',
     'text!templates/encouragement.html',
     'text!templates/offertory.html',
@@ -19,10 +22,11 @@ define(
     'text!templates/passingPeace.html',
     'text!templates/prayerAdoration.html',
     'text!templates/prayerConfession.html',
+    'text!templates/prayerPeople.html',
     'text!templates/prayerThanksgiving.html',
     'text!templates/reflection.html',
     'text!templates/sermon.html',
-    'text!templates/welcomeAnnouncements.html',
+    //'text!templates/welcomeAnnouncements.html',
     'text!templates/whereIsService.html',
   ],
 
@@ -36,6 +40,9 @@ define(
            // Templates
            benedictionDismissalTemplate,
            callToWorshipTemplate,
+           communionHymnsTemplate,
+           communionPreprarationTemplate,
+           confessionOfFaithTemplate,
            doxologyTemplate,
            encouragementTemplate,
            offertoryTemplate,
@@ -43,6 +50,7 @@ define(
            passingPeaceTemplate,
            prayerAdorationTemplate,
            prayerConfessionTemplate,
+           prayerPeopleTemplate,
            prayerThanksgivingTemplate,
            reflectionTemplate,
            sermonTemplate,
@@ -75,6 +83,7 @@ define(
         'welcome': 'showWelcome',
       },
       showProgram: function() {
+        // TODO: dynamically build this views array based on data
         var views = [
           new LocationView(),
           new ProgramSectionView({template:reflectionTemplate}),
@@ -85,94 +94,72 @@ define(
           new ProgramSectionView({template:prayerConfessionTemplate}),
           new GenericImageView({section:'confessional_response'}),
           new ProgramSectionView({template:encouragementTemplate}),
+          new ProgramSectionView({template:prayerPeopleTemplate}),
           new GenericImageView({section:'post_confessional'}),
           new ProgramSectionView({template:passingPeaceTemplate}),
-          new ProgramSectionView({template:welcomeTemplate}),
+          //new ProgramSectionView({template:welcomeTemplate}),
           new ProgramSectionView({template:sermonTemplate}),
           new ProgramSectionView({template:offertoryTemplate}),
+          new ProgramSectionView({template:confessionOfFaithTemplate}),
+          new ProgramSectionView({template:communionPreprarationTemplate}),
+          new ProgramSectionView({template:communionHymnsTemplate}),
           new ProgramSectionView({template:prayerThanksgivingTemplate}),
-          new GenericImageView({section:'closing_hymn'}),
+          // new GenericImageView({section:'closing_hymn'}),
           new ProgramSectionView({template:benedictionDismissalTemplate}),
         ];
         this.changePage(views);
       },
       showBenedictionDismissal: function() {
-        var views = [
-          new ProgramSectionView({template:benedictionDismissalTemplate})
-        ];
-        this.changePage(views);
+        $('#benediction').scrollView();
+        toggleNavMenu();
       },
       showCallToWorship: function() {
-        var views = [
-          new ProgramSectionView({template:callToWorshipTemplate})
-        ];
-        this.changePage(views);
+        $('#call-to-worship').scrollView();
+        toggleNavMenu();
       },
       showDoxology: function() {
-        var views = [
-          new ProgramSectionView({template:doxologyTemplate})
-        ];
-        this.changePage(views);
+        $('#doxology').scrollView();
+        toggleNavMenu();
       },
       showEncouragement: function() {
-        var views = [
-          new ProgramSectionView({template:encouragementTemplate})
-        ];
-        this.changePage(views);
+        $('#words-of-encouragement').scrollView();
+        toggleNavMenu();
       },
       showLocation: function() {
-        var views = [
-          new LocationView()
-        ];
-        this.changePage(views);
+        $('#location').scrollView();
+        toggleNavMenu();
       },
       showOffertory: function() {
-        var views = [
-          new ProgramSectionView({template:offertoryTemplate})
-        ];
-        this.changePage(views);
+        $('#offertory').scrollView();
+        toggleNavMenu();
       },
       showOpeningHymns: function() {
-        var views = [
-          new ProgramSectionView({template:openingHymnsTemplate})
-        ];
-        this.changePage(views);
+        $('#opening-hymns').scrollView();
+        toggleNavMenu();
       },
       showPassingPeace: function() {
-        var views = [
-          new ProgramSectionView({template:passingPeaceTemplate})
-        ];
-        this.changePage(views);
+        $('#passing-peace').scrollView();
+        toggleNavMenu();
       },
       showPrayerAdoration: function() {
-        var views = [
-          new ProgramSectionView({template:prayerAdorationTemplate})
-        ];
-        this.changePage(views);
+        $('#prayer-of-adoration').scrollView();
+        toggleNavMenu();
       },
       showPrayerConfession: function() {
-        var views = [
-          new ProgramSectionView({template:prayerConfessionTemplate})
-        ];
-        this.changePage(views);
+        $('#prayer-of-confession').scrollView();
+        toggleNavMenu();
       },
       showPrayerThanksgiving: function() {
-        var views = [
-          new ProgramSectionView({template:prayerThanksgivingTemplate})
-        ];
-        this.changePage(views);
+        $('#prayer-of-thanksgiving').scrollView();
+        toggleNavMenu();
       },
       showReflection: function() {
-        var views = [
-          new ProgramSectionView({template:reflectionTemplate})
-        ];
-        this.changePage(views);
+        $('#reflection').scrollView();
+        toggleNavMenu();
       },
       showSermon: function() {
-        var views = [
-          new ProgramSectionView({template:sermonTemplate})
-        ];
-        this.changePage(views);
+        $('#sermon').scrollView();
+        toggleNavMenu();
       },
       showWelcome: function() {
         var views = [
@@ -195,38 +182,49 @@ define(
       }
     });
 
+    var toggleNavMenu = function() {
+      var menuNav = $('#menu-nav');
+      if (isMenuOpen == true) {
+        menuNav.animate(
+          {marginLeft: '-165px'},
+          300,
+          function() {
+            isMenuOpen = false;
+          }
+        );
+      }
+      else {
+        menuNav.animate(
+          {marginLeft: '0'},
+          300,
+          function() {
+            isMenuOpen = true;
+          }
+        );
+      }
+    };
+
     var initialize = function() {
 
       var app_router = new AppRouter();
 
       Backbone.history.start();
 
-      var menuNav = $('#menu-nav');
-      $('#menu-button').on('click', function() {
-        if (isMenuOpen == true) {
-          menuNav.animate(
-            {marginLeft: '-165px'},
-            300,
-            function() {
-              isMenuOpen = false;
-            }
-          );
-        }
-        else {
-          menuNav.animate(
-            {marginLeft: '0'},
-            300,
-            function() {
-              isMenuOpen = true;
-            }
-          );
-        }
-      });
+      $('#menu-button').on('click', toggleNavMenu);
 
       // Clicking on header will scroll to top
       $('#header h1').click(function() {
         $('body').scrollTop(0);
       })
+
+      // Custom scroll thing
+      $.fn.scrollView = function () {
+        return this.each(function () {
+            $('html, body').animate({
+                scrollTop: $(this).offset().top - 44
+            }, 1000);
+        });
+      }
 
       // TODO: dynamically generate menu items, pages, and order
       var menuItems = [
@@ -241,7 +239,7 @@ define(
         {'prayerConfession': 'Prayer of Confession'},
         {'encouragement': 'Words of Encouragement'},
         {'passingPeace': 'Passing of the Peace'},
-        {'welcome': 'Welcome & Announcements'},
+        // {'welcome': 'Welcome & Announcements'},
         {'sermon': 'Sermon'},
         {'offertory': 'Offertory'},
         {'prayerThanksgiving': 'Prayer of Thanksgiving'},
@@ -252,10 +250,13 @@ define(
 
         for(var key in menuItems[i]) {
           var route = key;
+          var id = key;
           var displayName = menuItems[i][key];
         }
 
         menuList.append('<li><a href="#'+route+'">'+displayName+'</a></li>');
+        // TODO: if this works, move onclick to external js file instead
+        //menuList.append('<li><div class="" onclick="$(\''+id+'\').scrollView()">'+displayName+'</div></li>');
       }
     };
 

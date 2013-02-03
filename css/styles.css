@@ -33,19 +33,18 @@ abbr,acronym { border:0;
 
 body {
   background-color: #eee;
-  font-family: Verdana;
+  font-family: 'Donegal One';
 }
 
 h1 {
   color: #015067;
-  font-family: 'Donegal One';
   font-size: 32px;
   font-weight: bold;
   line-height: inherit;
 }
 
 h2 {
-  font-family: 'Donegal One';
+  color: #015067;
   font-size: 20px;
   font-weight: bold;
   line-height: normal;
@@ -53,7 +52,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Donegal One';
+  color: #015067;
   font-size: 18px;
   font-weight: bold;
   padding: 0.4em 0;
@@ -73,7 +72,6 @@ nav {
   height: 100%;
   margin-left: -165px;
   margin-top: 44px;
-  opacity: 0.9;
   overflow-y: scroll;
   position: fixed;
   width: 165px;
@@ -102,7 +100,6 @@ p {
 #menu-list a {
   color: white;
   display: block;
-  font-family: 'Donegal One';
   padding: 16px 6px;
   text-decoration: none;
 }
@@ -131,4 +128,9 @@ p {
 .header h1 {
   margin-right: 0.4em;
   text-align: right;
+}
+
+.super {
+  vertical-align: super;
+  font-size: .5em;
 }
