@@ -1,0 +1,61 @@
+{
+  "location": {
+    "date": "Feb 10th, 2013",
+    "time": "9:30 AM",
+    "location_address": "120 W. 14th Street (between 6th and 7th Aves)",
+    "location_name": "The Salvation Army"
+  },
+  "program": {
+    "reflection": "<p>You’re gonna have to serve somebody, yes indeed<br>You’re gonna have to serve somebody,<br>Well, it may be the devil or it may be the Lord<br>But you’re gonna have to serve somebody<br>&nbsp;&nbsp;— Bob Dylan</p><p>Grant that I may not so much seek to be consoled as to console;<br>to be understood, as to understand;<br>to be loved, as to love;<br>for it is in giving that we receive,<br>it is in pardoning that we are pardoned,<br>and it is in dying that we are born to Eternal Life.<br>&nbsp;&nbsp;— St. Francis, Assisi 12th century</p>",
+    "opening_hymns": [
+      {
+        "img": "https://lh3.googleusercontent.com/-K9a7EfMkrsY/URcGUCaxqnI/AAAAAAAACD0/GAuuJG4Eztk/s534/More_Precious_Than_Silver_02-10-13.jpg"
+      },
+      {
+        "img": "https://lh5.googleusercontent.com/-m-uLIlOoEpg/URcGT88yFEI/AAAAAAAACD4/_b6J22j4FCk/s543/May_The_Mind_Of_Christ_My_Savior_02-10-13.jpg"
+      }
+    ],
+    "call_to_worship": {
+      "title": "Psalm 34",
+      "sections": [
+        {
+          "leader": "I will extol the Lord at all times;<br>his praise will always be on my lips.",
+          "all": "My soul will boast in the Lord;<br>Let the afflicted hear and rejoice."
+        },
+        {
+          "leader": "Glorify the Lord with me;<br>Let us exalt his name together.",
+          "all": "I sought the Lord, and he answered me;<br>he delivered me from all my fears."
+        },
+        {
+          "leader": "Taste and see that the Lord is good;<br>blessed is the man who takes refuge in him.",
+          "all": "Fear the Lord, you his saints,<br>for those who fear him lack nothing."
+        }
+      ]
+    },
+    "prayer_of_adoration": "Our Father, who art in heaven, hallowed be thy name.Thy kingdom come, thy will be done, on earth as it is in heaven. Give us this day our daily bread,and forgive us our debts as we forgive our debtors.And lead us not into temptation, but deliver us from evil. For thine is the kingdom, and the power, and the glory, forever and ever. Amen.",
+    "prayer_of_confession": [{
+      "all": "Dear Father, we are thankful that your mercy is higher than the heavens, wider than our wanderings, deeper than all our sin. Forgive our frivolous attitude toward life, our callousness toward suffering, our envy of those who have more than we have, our obsession with creating a life of constant pleasure, our indifference to the treasures of heaven, our neglect of your wise and gracious law. Help us change our way of life so that we may desire what is good, love what you love, and do what you command. Through Christ our Lord. Amen."
+    }],
+    "confessional_response": {
+      "img": "https://lh4.googleusercontent.com/-eNcZZk8ezB8/URcGUfur-hI/AAAAAAAACEE/gdhawGsYiZ8/s583/Thou_Who_Was_Rich_02-10-13.jpg"
+    },
+    "words_of_encouragement": {
+      "title": "Romans 8:38-39",
+      "body": "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything in creation, will be able to separate us from the love of God that is in Christ Jesus our Lord."
+    },
+    "post_confessional": {
+      "img": "https://lh3.googleusercontent.com/-7VfIPAApjAc/URcGT9y0WvI/AAAAAAAACD8/cM4VkrQNFqg/s558/Immortal_Invisible_God_Only_Wise_02-10-13.jpg"
+    },
+    "sermon": {
+      "scripture_verses": "Acts 6:1-7", 
+      "scripture_body": "<p><span class='super'>1</span> In those days when the number of disciples was increasing, the Grecian Jews among them complained against the Hebraic Jews because their widows were being overlooked in the daily distribution of food. <span class='super'>2</span> So theTwelve gathered all the disciples together and said, “It would not be right for us to neglect the ministry of the word of God in order to wait on tables. <span class='super'>3</span> Brothers, choose seven men from among you who are known to be full of the Spirit and wisdom.We will turn this responsibility over to them <span class='super'>4</span> and will give our attention to prayer and the ministry of the word.”</p><p><span class='super'>5</span> This proposal pleased the whole group.They chose Stephen, a man full of faith and of the Holy Spirit; also Philip, Procorus, Nicanor, Timon, Parmenas, and Nicolas from Antioch, a convert to Judaism. <span class='super'>6</span> They presented these men to the apostles, who prayed and laid their hands on them.</p><p><span class='super'>7</span> So the word of God spread.The number of disciples in Jerusalem increased rapidly, and a large number of priests became obedient to the faith. (NIV)</p>",
+      "sermon_title": "Service in Christ",
+      "sermon_series": "Acts - The Gospel in the City"
+    },
+    "offertory": "Sonata No. 1, BWV 1002 — J. S. Bach",
+    "prayer_of_thanksgiving": "Almighty God, Father of all mercies, we your unworthy servants give you humble thanks for all your goodness and loving-kindness to us and to all whom you have made. We bless you for our creation, preservation, and all the blessings of this life; but above all for your immeasurable love in the redemption of the world by our Lord Jesus Christ; for the means of grace, and for the hope of glory. And, we pray, give us such an awareness of your mercies, that with truly thankful hearts we may show forth your praise, not only with our lips, but in our lives, by giving up ourselves to your service, and by walking before you in holiness and righteousness all our days; through Jesus Christ our Lord, to whom, with you and the Holy Spirit, be honor and glory throughout all ages. Amen.",
+    "closing_hymn": {
+      "img": "https://lh5.googleusercontent.com/-BMu2UAOxMxQ/URcGT4p5wJI/AAAAAAAACDs/1cxVLGV2oF4/s540/How_Sweet_The_Name_of_Jesus_Sounds_02-10-13.jpg"
+    }
+  }
+}
